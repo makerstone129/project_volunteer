@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인터뷰 내용</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(rgb(118, 212, 249), rgb(255, 255, 255));
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .poster {
+            max-width: 980px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .poster h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .poster p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 21px;
+        }
+        .paragraph {
+            text-align: justify; /* 문단 양쪽 정렬 */
+            margin: 20px 20px; /* 문단의 상하 여백 */
+            padding: 10px 20px; /* 문단의 내부 여백 */
+            background-color: #f9f9f9d6; /* 문단 배경색 */
+            border-radius: 5px; /* 문단 테두리 둥글게 */
+            display: none; /* 기본적으로 숨김 */
+        }
+        .paragraph.active {
+            display: block; /* 활성화된 슬라이드만 표시 */
+        }
+        li {
+            color: #555;
+            font-size: 21px;
+        }
+        li::marker {
+            content: '● '; /* 원하는 마커 스타일 */
+            color: rgb(0, 0, 0); /* 마커 색상 */
+            font-size: 30px; /* 마커 크기 */
+        }
+        .question::before {
+            content: 'Q: ';
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+        }
+        .answer::before {
+            content: 'A: ';
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+        }
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .prev {
+            left: 0;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .next {
+            right: 0;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <h1>인터뷰 내용</h1>
+        <div class="slide">
+            <div class="paragraph active">
+                <li>가족센터는 가족이 직면하는 돌봄, 소통 등 생애주기별 어려움을 해결하고 가족 구성원의 욕구를 통합적으로 지원하는 서비스 공간이자, 부모, 노인, 자녀 등 온 가족이 함께 참여하여 이용할 수 있는 공간이다. 현재, 가족센터에는 다문화 가족센터가 포함되어 있어 가족센터가 다문화 가족센터의 역할까지 수행한다.</li>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="paragraph active">
+                <p class="question">
+                    다문화 이민자들을 위해 취업 지원 프로그램을 운영하는 것으로 알고 있는데 취업지원 프로그램을 진행하는 과정에는 어떤 것들이 있는지
+                </p>
+            </div>
+            <div class="paragraph active">
+                <p class="answer">
+                    초기 적응을 위해서 처음에는 멘토분들을 붙여준다. 멘토분들은 이제 막 들어온 초기 입국자들에게 같이 시장도 가거나, 식당도 간다. 또한, 마트에 가서 어떻게 계산하는지 등을 가르쳐 주고 있다. 이러한 프로그램을 통해, 저희 가족센터는 지속적으로 다문화 가정을 지원하고 있다. 당연히 한국어 공부같은 교육도 하고 있다.
+                </p>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="paragraph question">
+                <p>다문화 가정에서 한국 문화 때문에 겪고 있는 문제점이 무엇이 있는지</p>
+            </div>
+            <div class="paragraph answer">
+                <p>문화 차이 때문에 생기는 거야 당연히 있다. 음식도 안 맞고, 생활 습관도 안 맞다. 어떨 땐 학교에서 연락이 온다. 이 아이 엄마가 다문화인데 애를 이 한여름에 겨울옷을 입혀서 보낸다. 계절에 맞지 않는 옷을 입혀 보내고 신발을 안 신겨 보내고 애는 막 저기 뭐 제대로 씻기지도 않는 것 같고 등등 이런 게 학교에서 우리한테 전화 온다. 그러면은 애 엄마한테 "어머니 애들 학교 보낼 때는 집 여름이면 반팔을 입혀야 된다. 옷 좀 깨끗하게 입고 다녀야 한다." 등 알려준다. 근데 내가 베트남 가보니까 걔네는 사실 4계절 내내 거의 똑같은 옷을 입는다. 그러니까 엄마가 그런 생각이 없는 거다. 그냥 내가 베트남에서 그렇게 자랐으니까 여기 와서 애 키우는 것도 그냥 베트남은 애들 키우는 건 마냥 키우는 거다.</p>
+            </div>
+        </div>
+        <!-- 추가 슬라이드를 여기 추가 -->
+        <button class="nav-button prev" onclick="prevSlide()">&#x25C0;</button>
+        <button class="nav-button next" onclick="nextSlide()">&#x25B6;</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.querySelectorAll('.paragraph').forEach(paragraph => {
+                    paragraph.classList.toggle('active', i === index);
+                });
+            });
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide > 0) ? currentSlide - 1 : slides.length - 1;
+            showSlide(currentSlide);
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
+            showSlide(currentSlide);
+        }
+
+        showSlide(currentSlide); // 초기 슬라이드 표시
+    </script>
+</body>
+</html>

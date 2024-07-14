@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홍보 웹페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(rgb(118, 212, 249), rgb(255, 255, 255));
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding-top: 120px;
+        }
+        .poster {
+            max-width: 980px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: bottom;
+        }
+        .poster h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .poster p {
+            color: #555;
+            line-height: 1.6;
+        }
+        .poster img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .poster .cta {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .poster .cta:hover {    
+            background-color: #0056b3;
+        }
+        .background {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 1500px; /* 이미지 너비 */
+        height: 375px; /* 이미지 높이 */
+        background-image: url('배경.jpg');
+        background-size: cover;
+        background-position: top center;
+        transform: translateX(-50%);
+        z-index: -1; /* 배경을 뒤로 보내기 */
+        background-repeat: no-repeat;
+        opacity: 0.7;
+}
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="poster">
+        <h1>홍보 웹 페이지</h1>
+        <br><a href="body.html" class="cta">자세히 보기</a><br>
+        <a href="interview.html" class="cta">인터뷰 내용보기</a>
+        <br><a href="https://familynet.or.kr/web/index.do" class="cta">홈페이지 바로가기</a><br>
+    </div>
+</body>
+</html>
